@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block content %}
+
+
+
+            <div class="shadow p-3 mb-5 bg-black rounded" >
+
+
+            <div class="card" >
+
+                <div class="card-body">
+                    <h5 class="card-title">{{task.name}}</h5>
+                    <p><b>{{task.priority}}</b></p>
+                    <p><b>{{task.date}}</b></p>
+                         <a class="btn btn-success" href="{% url 'classapp:delete' task.id %}">Delete</a>
+                    <a class="btn btn-success" href="{% url 'classapp:update' task.id %}">Update</a>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}
+
+
+
